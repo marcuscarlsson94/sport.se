@@ -1,0 +1,35 @@
+// == Mixins ==
+@mixin google-font($font) {
+  $font: unquote($font);
+  @import url("https://fonts.googleapis.com/css?family=#{$font}")
+}
+@include google-font("Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
+@include google-font("Oswald:200,300,400,500,600,700");
+
+// == MEDIA QUERIES
+@mixin mobile() {
+   @media only screen and (max-width: 420px){
+    @content;
+  }
+}
+@mixin tablet() {
+   @media only screen and (max-width: 768px){
+    @content;
+  }
+}
+@mixin desktop-medium() {
+   @media only screen and (min-width: 992px){
+    @content;
+  }
+}
+@mixin desktop-large() {
+   @media only screen and (max-width : 1440px){
+    @content;
+  }
+}
+
+@mixin breakpoint-i-col() {
+   @media only screen and (max-width : 1098px){
+    @content;
+  }
+}

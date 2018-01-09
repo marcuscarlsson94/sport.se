@@ -1,0 +1,377 @@
+/*--- Base css layout --*/
+@import "partials/variables";
+@import "partials/mixins";
+@import "partials/animations";
+
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  padding: 0;
+  margin: auto;
+  background-color: #f5f6f7;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  color: rgba(0,0,0,.55);
+  height: 100%;
+  max-width: 1920px;
+  position: relative;
+}
+
+a {
+  position: relative;
+  text-decoration: none;
+  list-style: none;
+  color: $blue;
+  cursor: url('/Users/marcuscarlsson/Documents/code/sport.se/img/Ellipse.svg'), auto;
+  transition: .2s ease all;
+
+  &:hover {
+    color: darken($blue, 10%);
+    text-decoration: underline;
+  }
+}
+
+h2 {
+  font-size: 44px;
+  font-family: 35px;
+  font-weight: 800;
+  margin: 0;
+  @include tablet {
+    font-size: 30px;
+  }
+  @include mobile {
+    font-size: 20px;
+  }
+}
+
+h3 {
+  font-size: 44px;
+  font-weight: 800;
+  color: rgba(0,0,0,.75);
+  margin: 0;
+  @include tablet {
+  }
+  @include mobile {
+    display: block;
+  }
+}
+
+h4 {
+  font-size: 25px;
+  font-family: $h3-font;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  line-height: 150%
+}
+
+hr {
+  border: 1px solid #ececec;
+}
+
+div {
+  position: relative;
+}
+
+figure {
+  margin:0;
+}
+
+
+/*====
+MARGINS
+======*/
+
+.margin-text-btm {
+  margin-bottom: 20px;
+
+  @include tablet {
+    margin-bottom: 10px;
+  }
+
+  @include mobile {
+    margin-bottom: 10px;
+  }
+}
+
+.margin-text-top {
+  margin-top: 20px;
+
+  @include tablet {
+    margin-top: 10px;
+  }
+
+  @include mobile {
+    margin-top: 10px;
+  }
+}
+
+
+/*====
+PADDINGS
+======*/
+
+.padding-lr-small {
+  padding: 0 20px;
+}
+
+.padding-lr-medium {
+  padding: 0 40px;
+}
+
+.padding-lr-large {
+  padding: 0 60px;
+}
+
+/*====
+REUSABLE
+======*/
+
+.container {
+  width: 1280px;
+}
+
+.container-min {
+  width: 100%;
+  max-width: 980px;
+}
+
+
+/*====
+HEADER
+======*/
+
+header {
+  width: 100%;
+  height: 80px;
+  background-color: transparent;
+  position: relative;
+}
+
+.logo {
+  position: relative;
+  width: 50%;
+  fill: white;
+  z-index: 8;
+
+  @include tablet {
+    margin-top: 20px;
+  }
+  @include mobile {
+    margin-top: 20px;
+  }
+}
+
+.masthead {
+  position: relative;
+  width: 100%;
+}
+
+.button-wrapper {
+  display: inline-flex;
+  z-index: 88;
+
+  @include tablet {
+    display: none;
+  }
+  @include mobile {
+    display: none;
+  }
+}
+
+.button-header {
+  border: 2px solid white;
+  padding: 10px 30px;
+  color: white;
+  border-radius: 50px;
+
+  &:first-of-type {
+    margin-right: 20px;
+  }
+}
+
+.hero {
+  position: relative;
+  height: 80vh;
+  width: 100%;
+  background-image: url('../sport.se/img/hero.jpg');
+  object-fit: cover;
+
+  &:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom left, rgba(0,0,0,0), rgba(65, 100, 140, .78));
+    z-index: 5;
+  }
+}
+
+.hero-heading {
+  max-width: 70%;
+  height: 100%;
+  color: #fff;
+  z-index: 10;
+  padding-left: 70px;
+
+  @include tablet {
+    max-width: 100%;
+    padding-left: 0px;
+    transform: translateY(calc(50% - 210px));
+  }
+  @include mobile {
+    max-width: 100%;
+    padding-left: 0px;
+    transform: translateY(calc(50% - 210px));
+  }
+
+  h2, p {
+    display: block;
+  }
+}
+
+
+/*====
+Career
+======*/
+
+.career_section {
+  margin: auto;
+  padding: 50px 0;
+  text-align: center;
+  border-bottom: 1px solid #ececec;
+
+  @include tablet {
+    padding: 30px;
+  }
+  @include mobile {
+    padding: 30px;
+  }
+}
+
+.button {
+  background-color: $blue;
+  padding: 10px 30px;
+  color: white;
+  border-radius: 50px;
+  margin-top: 20px;
+  display: inline-block;
+
+  @include tablet {
+    display: block;
+  }
+  @include mobile {
+    display: block;
+  }
+
+  &:first-of-type {
+    margin-right: 20px;
+  }
+
+  &:first-of-type + .button {
+    margin-right: 20px;
+  }
+}
+
+/*====
+FLEX COMPONENTS
+======*/
+
+.f-col-md-8 {
+  flex: 1 0 0;
+  padding-right: 15px;
+}
+
+.f-col-md-4 {
+  flex: 2 0 0;
+}
+
+.f {
+  display: flex;
+  @include tablet {
+    display: block;
+  }
+  @include mobile {
+    display: block;
+  }
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.f-c-c {
+  align-items: center;
+  justify-content: center;
+}
+
+.f-c-b {
+  justify-content: center;
+}
+
+.f-c-h {
+  align-items: center;
+}
+
+.f-d-c {
+  flex-direction: column;
+}
+
+.flex-stretch {
+  justify-content: space-between;
+  @include tablet {
+    display: block;
+  }
+  @include mobile {
+    display: block;
+  }
+}
+
+.f-col {
+  flex-direction: column;
+}
+
+
+.f-col-6 {
+  flex-basis: 50%;
+}
+
+.f-col-3 {
+  flex-basis: 33.33333%;
+
+  @include tablet {
+    flex-basis: 33.33333%;;
+  }
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.f-col-4 {
+  flex: 1;
+
+  @include desktop-large {
+    flex-basis: 50%;
+  }
+
+  @include tablet {
+    flex-basis: 50%;
+  }
+
+  @include mobile {
+    display: block;
+  }
+}
+
+.f-col-full {
+  flex-basis: 100%;
+}
