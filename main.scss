@@ -339,6 +339,12 @@ WEAPON SECTION
   width: 50px;
   background-size: contain;
   background-repeat: no-repeat;
+  opacity: .55;
+  transition: .3s ease all;
+
+  &:hover {
+    opacity: 1;
+  }
 
   &:first-of-type {
     background-image: url('../sport.se/img/logo_apple.svg');
