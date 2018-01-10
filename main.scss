@@ -27,7 +27,7 @@ a {
   text-decoration: none;
   list-style: none;
   color: $blue;
-  cursor: url('/Users/marcuscarlsson/Documents/code/sport.se/img/Ellipse.svg'), auto;
+  cursor: pointer;
   transition: .2s ease all;
 
   &:hover {
@@ -54,7 +54,7 @@ h2 {
 }
 
 h3 {
-  font-size: 44px;
+  font-size: 35px;
   font-weight: 800;
   color: rgba(0,0,0,.75);
   margin: 0;
@@ -147,6 +147,11 @@ REUSABLE
   max-width: 980px;
 }
 
+.container-xs {
+  width: 100%;
+  max-width: 700px;
+}
+
 
 /*====
 HEADER
@@ -191,8 +196,11 @@ header {
 }
 
 .button-header {
-  border: 2px solid white;
-  padding: 10px 30px;
+  background-color: $blue;
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 14px 30px;
   color: white;
   border-radius: 50px;
   transition: .3s ease all;
@@ -210,10 +218,11 @@ header {
 
 .hero {
   position: relative;
-  height: 80vh;
+  height: 85vh;
   width: 100%;
   background-image: url('../sport.se/img/hero.jpg');
   object-fit: cover;
+  background-position: center;
 
   &:after {
     position: absolute;
@@ -272,8 +281,11 @@ Career
 
 .button {
   background-color: $blue;
-  padding: 10px 30px;
+  padding: 14px 30px;
   color: white;
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
   border-radius: 50px;
   margin-top: 20px;
   display: inline-block;
@@ -344,6 +356,7 @@ WEAPON SECTION
 
   &:hover {
     opacity: 1;
+    transform: translateY(-3px);
   }
 
   &:first-of-type {
@@ -367,6 +380,44 @@ WEAPON SECTION
     background-image: url('../sport.se/img/logo_vue.svg');
   }
 
+}
+
+
+/*====
+INSTAGRAM SECTION
+======*/
+
+.instagram_wrapper {
+  border-bottom: 1px solid #ececec;
+  width: 100%;
+}
+
+.instagram_image {
+  position: relative;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  max-height: 400px;
+  height: 100%;
+  width: 100%;
+
+  &-1 {
+    background-image: url('../sport.se/img/insta_01.jpg');
+  }
+  &-2 {
+    background-image: url('../sport.se/img/insta_02.jpg');
+  }
+  &-3 {
+    background-image: url('../sport.se/img/insta_03.jpg');
+  }
+}
+
+.instagram_content {
+  position: absolute;
+  padding: 20px;
+  content: "";
+  bottom: 0px;
+  left: 0px;
+  color: #fff;
 }
 
 
