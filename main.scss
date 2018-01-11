@@ -531,6 +531,18 @@ TEAM SECTION
   font-size: 33px;
   margin-top: 10px;
 
+  a {
+
+    display: inline-block;
+    opacity: .6;
+    transition: all .3s ease;
+
+    &:hover {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+  }
+
   &-footer {
     font-size: 28px;
     margin-top: 10px;
@@ -547,16 +559,6 @@ TEAM SECTION
   }
 
 
-  a {
-
-    opacity: .6;
-    transition: .3s ease all;
-
-    &:hover {
-      opacity: 1;
-      transform: scale(1.05);
-    }
-  }
 }
 
 
