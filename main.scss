@@ -468,7 +468,7 @@ TEAM SECTION
 
 .team-wrapper {
   padding: 80px 0;
-  border-bottom: 1px solid #ececec;
+  background-color: #f5f6f7;
 }
 
 .teammates {
@@ -481,19 +481,41 @@ TEAM SECTION
   position: relative;
   flex-basis: 25%;
   margin-bottom: 20px;
-  padding:10px;
+  // padding:10px;
 
   @media only screen and (max-width : 1254px){
     flex-basis: 33.3333%;
  }
 
   &-img {
-    background-image: url('./img/garyv.jpg');
-    background-position: center;
+    background-image: url('./img/martin.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    max-height: 400px;
+    max-height: 360px;
     height: 100%;
+
+    @include tablet {
+      background-size: cover;
+    }
+    @include mobile {
+      background-size: cover;
+    }
+
+    &-1 {
+      background-image: url('./img/reine.jpg');
+    }
+    &-2 {
+      background-image: url('./img/bjorn.jpg');
+    }
+    &-3 {
+      background-image: url('./img/marten.jpg');
+    }
+    &-4 {
+      background-image: url('./img/jimmie.jpg');
+    }
+    &-5 {
+      background-image: url('./img/garyv.jpg');
+    }
   }
 
   &-text {
@@ -502,25 +524,86 @@ TEAM SECTION
 }
 
 .icons {
-  font-size: 35px;
+  font-size: 33px;
   margin-top: 10px;
+
+  &-footer {
+    font-size: 28px;
+    margin-top: 10px;
+
+    & a i {
+        padding: 5px;
+    }
+
+  }
 
   & a i {
     color: #000;
+    padding: 5px;
   }
 
 
   a {
 
-    opacity: .8;
+    opacity: .6;
     transition: .3s ease all;
 
     &:hover {
       opacity: 1;
+      transform: scale(1.05);
     }
   }
 }
 
+
+/*====
+FOOTER WRAPPER
+======*/
+
+.footer-wrapper {
+  padding: 80px 0 5px 0;
+}
+
+.footer-container {
+  margin: auto;
+  justify-content: space-around;
+  align-items: start;
+
+  img {
+
+    opacity: .2;
+    max-width: 150px;
+    margin-right: 40px;
+  }
+}
+
+.footer-text {
+
+  margin-right: 40px;
+
+  h4 {
+    font-size: 17px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}
+
+.hr {
+  margin-top: 80px;
+  height: 1px;
+  border: none;
+  background-color: #ececec;
+  color: #ececec;
+}
+
+.copyright {
+    margin: 17px auto 17px auto;
+    font-size: 13px;
+    opacity: .5;
+
+}
 
 /*====
 FLEX COMPONENTS
@@ -566,6 +649,9 @@ FLEX COMPONENTS
 }
 .f-s-b {
   justify-content: space-between;
+}
+.f-s-a {
+  justify-content: space-around;
 }
 
 .flex-stretch {
