@@ -12,6 +12,7 @@
 body {
   padding: 0;
   margin: auto;
+  position: relative;
   background-color: #f5f6f7;
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
@@ -19,7 +20,7 @@ body {
   color: rgba(0,0,0,.55);
   height: 100%;
   max-width: 1920px;
-  position: relative;
+  transition: all .4s ease;
 }
 
 a {
@@ -38,6 +39,7 @@ a {
 
 section {
   background-color: white;
+  z-index: 1;
 }
 
 h2 {
@@ -201,6 +203,73 @@ header {
   width: 100%;
 }
 
+.hamburger {
+  display: inline-block;
+  cursor: pointer;
+  z-index: 66;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: 0.4s;
+
+.change, .bar1, .bar3 {
+  transition-timing-function: cubic-bezier(.17,1.14,.62,.71);
+}
+
+}
+
+.change .bar1 {
+    -webkit-transform: translate(0px, -1px) rotate(-45deg);
+    transform: translate(0px, -1px) rotate(-45deg);
+    transform-origin: center;
+}
+
+.change .bar2 {opacity: 0; transform: translateX(5px);}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-6px, -7px);
+    transform: rotate(45deg) translate(-6px, -7px);
+}
+
+
+.navigation-wrapper {
+  width: 300px;
+  height: 100vh;
+  background: #111;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  padding: 40px 50px;
+}
+
+.navigation-hidden {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: #111;
+  text-align: center;
+  color: white;
+  width: 100%;
+
+  a li{
+    width: 100%;
+    padding: 20px 20px;
+    color: white;
+    border-bottom: 1px solid #000;
+  }
+}
+
+.slide-left {
+  transform: translateX(-300px);
+}
+
 .button-wrapper {
   display: inline-flex;
   z-index: 88;
@@ -241,6 +310,7 @@ header {
   background-image: url('../sport.se/img/hero.jpg');
   object-fit: cover;
   background-position: center;
+  z-index: 1;
 
   &:after {
     position: absolute;
@@ -284,6 +354,7 @@ Career
 ======*/
 
 .career_section {
+  position: relative;
   margin: auto;
   padding: 80px 0;
   text-align: center;
@@ -548,6 +619,17 @@ TEAM SECTION
 
     & a i {
         padding: 5px;
+    }
+
+  }
+
+  &_nav {
+    font-size: 28px;
+    margin-top: 10px;
+
+    & a i {
+      padding: 5px;
+      color: $blue;
     }
 
   }
