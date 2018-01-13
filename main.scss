@@ -24,6 +24,7 @@ body {
 
 main {
   transition: all .4s ease;
+  // transition: .4s cubic-bezier(0,.88,.11,.89);
 }
 
 a {
@@ -175,16 +176,28 @@ REUSABLE
   max-width: 700px;
 }
 
-
 /*====
 HEADER
 ======*/
 
 header {
   width: 100%;
-  height: 80px;
+  height: 100%;
+  max-height: 100px;
   background-color: transparent;
   position: relative;
+}
+
+.fixed {
+  width: 100%;
+  max-width: 1920px;
+  height: 80px;
+  background-color: rgba(0,0,0, .76);
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
 }
 
 .logo {
@@ -204,6 +217,7 @@ header {
 .masthead {
   position: relative;
   width: 100%;
+  padding: 15px 40px;
 }
 
 .hamburger {
@@ -241,7 +255,7 @@ header {
 
 .navigation-wrapper {
   margin: auto;
-  width: 300px;
+  width: 400px;
   height: 100vh;
   background: #111;
   position: absolute;
@@ -271,10 +285,11 @@ header {
 }
 
 .slide-left {
-  transform: translateX(-300px);
+  transform: translateX(-400px);
 }
 
 .button-wrapper {
+  margin-right: 60px;
   display: inline-flex;
   z-index: 88;
 
@@ -634,14 +649,29 @@ TEAM SECTION
     & a i {
       padding: 5px;
       color: $blue;
+      display: inline-block;
+
+      &:hover {
+        transform: scale(1.15);
+        color: darken($blue, 5%);
+      }
+    }
+
+    a {
+      padding: 10px 10px;
+    }
+
+    i {
+      transition: all .2s ease;
     }
 
   }
 
   & a i {
     color: #000;
-    padding: 5px;
   }
+
+
 
 
 }
