@@ -9,13 +9,6 @@ $(function() {
 
     });
 
-$(function() {
-        if $(".hamburger").click(function() {
-            $("main").toggleClass('slide-left');
-        });
-
-    });
-
 
 
 // $(function() {

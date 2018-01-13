@@ -20,6 +20,9 @@ body {
   color: rgba(0,0,0,.55);
   height: 100%;
   max-width: 1920px;
+}
+
+main {
   transition: all .4s ease;
 }
 
@@ -237,6 +240,7 @@ header {
 
 
 .navigation-wrapper {
+  margin: auto;
   width: 300px;
   height: 100vh;
   background: #111;
