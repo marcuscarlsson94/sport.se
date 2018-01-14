@@ -5,12 +5,24 @@
 $(function() {
         $(".hamburger").click(function() {
             $("main").toggleClass('slide-left');
-            if(!$(this).next('.change').is(":visible") )
-            $('.swap').text('STÄNG');
-            else if (!$(this).next('.change').is(":hidden") )
+            if(!$(this).hasClass("change") )
             $('.swap').text('MENY');
+            else
+            $('.swap').text('STÄNG');
         });
     });
+
+
+
+// $(function() {
+//         $(".hamburger").click(function() {
+//             $("main").toggleClass('slide-left');
+//             if(!$(this).next('.hamburger').hasClass("change") )
+//             $('.swap').text('STÄNG');
+//             else if (!$(this).next('.hamburger').not(":hidden") )
+//             $('.swap').text('MENY');
+//         });
+//     });
 
 
 
