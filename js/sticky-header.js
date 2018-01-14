@@ -17,5 +17,5 @@ var $document = $(document),
     className = 'fixed';
 
 $document.scroll(function() {
-  $element.toggleClass(className, $document.scrollTop() >= 150);
+  $element.toggleClass(className, $document.scrollTop() >= 450);
 });
