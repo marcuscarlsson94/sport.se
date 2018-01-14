@@ -203,9 +203,11 @@ header {
   padding: 25px 50px;
   @include tablet {
     display: inline-flex !important;
+    padding: 20px 20px;
   }
   @include mobile {
     display: inline-flex !important;
+    padding: 20px 20px;
   }
 }
 
@@ -702,11 +704,25 @@ FOOTER WRAPPER
     opacity: 0.2;
     max-width: 150px;
     margin-right: 40px;
+
+    @include tablet {
+      margin-right: 0px;
+    }
+    @include mobile {
+      margin-right: 0px;
+    }
   }
 }
 
 .footer-text {
   margin-right: 40px;
+
+  @include tablet {
+    margin-right: 0px;
+  }
+  @include mobile {
+    margin-right: 0px;
+  }
 
   h4 {
     font-size: 17px;
