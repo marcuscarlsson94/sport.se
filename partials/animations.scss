@@ -28,6 +28,36 @@
   animation-duration: 1s;
 }
 
+@-webkit-keyframes fade-up-p {
+  0%   { transform: translateY(20px); opacity: 0;  }
+  60%   { transform: translateY(20px); opacity: 0;  }
+  100% { transform: translateY(00px); opacity: 1; }
+}
+@-moz-keyframes fade-up-p {
+  0%   { transform: translateY(20px); opacity: 0; }
+  60%   { transform: translateY(20px); opacity: 0;  }
+  100% { transform: translateY(00px); opacity: 1; }
+}
+@-o-keyframes fade-up-p {
+  0%   { transform: translateY(20px); opacity: 0; }
+  60%   { transform: translateY(20px); opacity: 0;  }
+  100% { transform: translateY(00px); opacity: 1; }
+}
+@keyframes fade-up-p {
+  0%   { transform: translateY(20px); opacity: 0; }
+  60%   { transform: translateY(20px); opacity: 0;  }
+  100% { transform: translateY(00px); opacity: 1; }
+}
+
+.fade-up-p {
+  -webkit-animation: fade-up-p .5s; /* Safari 4+ */
+  -moz-animation:    fade-up-p .5s; /* Fx 5+ */
+  -o-animation:      fade-up-p .5s; /* Opera 12+ */
+  animation:         fade-up-p .5s; /* IE 10+, Fx 29+ */
+  animation-iteration-count: 1;
+  animation-duration: 1s;
+}
+
 @-webkit-keyframes fade-up-slow {
   0%   { transform: translateY(20px); }
   100% { transform: translateY(00px); }
