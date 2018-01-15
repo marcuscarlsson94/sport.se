@@ -13,7 +13,7 @@ body {
   padding: 0;
   margin: auto;
   position: relative;
-  background-color: #111;
+  background-color: #f5f6f7;
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
   font-size: 17px;
@@ -267,7 +267,7 @@ header {
 .navigation-wrapper {
   margin: auto;
   width: 100%;
-  background: #111;
+  background: #f5f6f7;
   position: absolute;
   text-align: center;
   top: 0;
@@ -279,11 +279,10 @@ header {
 .navigation-hidden {
   list-style: none;
   display: inline-flex;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
-  background: #111;
   text-align: center;
-  color: white;
   width: 100%;
 
   @include tablet {
@@ -296,7 +295,8 @@ header {
   a li {
     width: 100%;
     padding: 20px;
-    color: white;
+    color: $blue;
+    font-weight: 600;
   }
 }
 
@@ -663,11 +663,11 @@ TEAM SECTION
     }
 
     & a i {
-      color: white;
+      color: rgba(0,0,0,.85);
 
       &:hover {
         transform: scale(1.15);
-        color: darken(white, 5%);
+        color: darken(rgba(0,0,0,.85), 5%);
         text-decoration: none;
       }
     }
