@@ -13,7 +13,7 @@ body {
   padding: 0;
   margin: auto;
   position: relative;
-  background-color: #f5f6f7;
+  background-color: #111;
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
   font-size: 17px;
@@ -266,23 +266,19 @@ header {
 
 .navigation-wrapper {
   margin: auto;
-  width: 400px;
-  height: 100vh;
+  width: 100%;
   background: #111;
   position: absolute;
   text-align: center;
   top: 0;
   right: 0;
-  bottom: 0;
   z-index: 0;
-  padding: 40px 50px;
-  @include mobile {
-    width: 300px;
-  }
+  padding: 20px 40px;
 }
 
 .navigation-hidden {
   list-style: none;
+  display: inline-flex;
   margin: 0;
   padding: 0;
   background: #111;
@@ -290,18 +286,25 @@ header {
   color: white;
   width: 100%;
 
+  @include tablet {
+    display: block;
+  }
+  @include mobile {
+    display: block;
+  }
+
   a li {
     width: 100%;
     padding: 20px;
     color: white;
-    border-bottom: 1px solid #000;
   }
 }
 
 .slide-left {
-  transform: translateX(-400px);
+  transform: translateY(106px);
+  transform: scale(.95);
   @include mobile {
-    transform: translateX(-300px);
+    transform: translateY(346px);
   }
 }
 
@@ -650,15 +653,22 @@ TEAM SECTION
 
   &_nav {
     font-size: 28px;
-    margin-top: 10px;
+    display: inline-flex;
+
+    @include tablet {
+      display: block;
+    }
+    @include mobile {
+      display: block;
+    }
 
     & a i {
-      color: $blue;
-      display: inline-block;
+      color: white;
 
       &:hover {
         transform: scale(1.15);
-        color: darken($blue, 5%);
+        color: darken(white, 5%);
+        text-decoration: none;
       }
     }
 
