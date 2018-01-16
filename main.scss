@@ -295,7 +295,7 @@ header {
 
     &:hover {
       text-decoration: none;
-      color: lighten(rgba(0,0,0,.85), 20%);
+      color: $blue;
     }
 
     &:hover:after {
